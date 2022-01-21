@@ -11,6 +11,7 @@ public class Storage {
         return myStorage;
     }
 
+    // please separate fields and methods. Following convention fields should be on the top
     private final Map<Character, Product> myStorage = new HashMap<>();
 
     public void putIntoStorage(Product product){

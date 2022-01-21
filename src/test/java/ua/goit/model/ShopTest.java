@@ -37,11 +37,13 @@ public class ShopTest {
     }
     @Test
     public void testAnswerEquals_5A_3B_3C_3D(){
+        // if you want be sure that products will be always with upper case create a private method for it
         String productSet = "AAAAABBBCCCDDD".toUpperCase();
         Assert.assertEquals(23.5, shop.getFinalPrice(productSet), 0.00001);
     }
 
     @Test
+    // actually here we test the same method as in previous
     public void testAnswerEquals_6A_6B_6C_6D(){
         String productSet = "AAAAAABBBBBBCCCCCCDDDDDD".toUpperCase();
         Assert.assertEquals(41.0, shop.getFinalPrice(productSet), 0.00001);

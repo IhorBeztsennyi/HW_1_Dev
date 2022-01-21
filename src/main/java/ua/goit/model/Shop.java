@@ -1,13 +1,14 @@
 package ua.goit.model;
 
 import ua.goit.repository.Storage;
-
+// always delete unused imports
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// please use alt+ctrl+l
 public class Shop {
 
     private Storage storage;

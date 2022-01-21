@@ -1,12 +1,15 @@
 package ua.goit.model;
 
+// always delete unused imports
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+// If we test always the same input data we can do all asserts in one test
 public class ProductTest {
 
+    // what do the method? Do we need it?
     @Before
     public void productCreating() {
         Product product = new Product('A', 1.25, 3, 3.00);
