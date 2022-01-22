@@ -3,9 +3,7 @@ package ua.goit.model;
 import ua.goit.repository.Storage;
 // always delete unused imports
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.stream.Collectors;
 
 // please use alt+ctrl+l
@@ -17,10 +15,9 @@ public class Shop {
         this.storage = storage;
     }
 
-
     public Double getFinalPrice(String request) {
         Double result = 0.0;
-        HashMap<Character, Integer> productsWithQuantity = quantityOfProducts(request);
+        HashMap<Character, Integer> productsWithQuantity = quantityOfProducts(request.toUpperCase());
         for (Character name : productsWithQuantity.keySet()) {
             Product product = storage.getProduct(name);
             if (product.getPromotionAmount()>0 && product.getPromotionPrice()>0.0){
@@ -57,6 +54,4 @@ public class Shop {
         }
         return productsWithQuantity;
     }
-
-
 }

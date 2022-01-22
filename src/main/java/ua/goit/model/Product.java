@@ -28,5 +28,4 @@ public class Product {
     public double getPromotionPrice() {
         return promotionPrice;
     }
-
 }
