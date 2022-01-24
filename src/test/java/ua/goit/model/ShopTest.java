@@ -7,6 +7,10 @@ import ua.goit.repository.Storage;
 
 public class ShopTest {
 
+    // here we go with "Step 2" ;)
+    // The general idea of unit testing - isolation, so we shouldn't use any dependency
+    // instead we use Mockito library.
+    // You have to create in init method Map what you want get from Storage and mock the response instead of putting objects in real object
     Storage storage = new Storage();
     Shop shop = new Shop(storage);
 
